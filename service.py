@@ -57,7 +57,7 @@ def main():
    # Get active skin name
    activeskin = xbmc.getSkinDir()
    log("Active Skin: %s" % activeskin)
-   if not activeskin == "skin.arctic.zephyr.mod":
+   if not activeskin == "skin.arctic.zephyr.martian":
       log("Current active Skin is not Supportet by this Addon!")
       return
 
