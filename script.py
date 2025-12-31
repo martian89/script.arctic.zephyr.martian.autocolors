@@ -10,7 +10,11 @@ addon = xbmcaddon.Addon()
 addonName = addon.getAddonInfo("name")
 
 location = addon.getSetting("location")
-Url = 'https://www.yahoo.com/news/_tdnews/api/resource/WeatherSearch;text=%s'
+language = xbmc.getLanguage(xbmc.ISO_639_1)
+
+art = {'icon': 'special://skin/extras/icons/location-star.png'}
+
+Url = 'https://nominatim.openstreetmap.org/search?city=%s&format=jsonv2&limit=10&accept-language=' + language
 cache = simplecache.SimpleCache()
 
 # The original Code for Location Select is from the addon weather.multi borrowed
@@ -38,15 +42,16 @@ def search_location():
          if locs:
             items = []
             for item in locs:
-               listitem = xbmcgui.ListItem(item['qualifiedName'], item['city'] + ' - ' + item['country'] + ' [' + str(item['lat']) + '/' + str(item['lon']) + ']')
+               listitem = xbmcgui.ListItem(item['display_name'], item['lat'] + '/' + item['lon'])
+               listitem.setArt(art)
                items.append(listitem)
             selected = dialog.select(xbmc.getLocalizedString(396), items, useDetails=True)
             if selected != -1:
-               addon.setSetting("location", locs[selected]['city'])
-               addon.setSettingNumber("latitude", locs[selected]['lat'])
-               addon.setSettingNumber("longitude", locs[selected]['lon'])
+               addon.setSetting("location", locs[selected]['name'])
+               addon.setSettingNumber("latitude", float(locs[selected]['lat']))
+               addon.setSettingNumber("longitude", float(locs[selected]['lon']))
                # Set Timezones in Settings
-               times = suntimes(locs[selected]['city'],locs[selected]['lat'],locs[selected]['lon'])
+               times = suntimes(locs[selected]['name'],float(locs[selected]['lat']),float(locs[selected]['lon']))
                addon.setSetting("start_time_sun", times["start"])
                addon.setSetting("end_time_sun", times["end"])
                log("Selected location: %s" % locs[selected])
