@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: Arctic: Zephyr - Reloaded - Automatic Day/Night Colors
-# Addon id: service.arctic.zephyr.mod.autocolors
+# Addon id: script.arctic.zephyr.martian.autocolors
 # Addon Provider: semool
 msgid ""
 msgstr ""
@@ -19,31 +19,31 @@ msgid "General"
 msgstr "Général"
 
 msgctxt "#30002"
-msgid "Start time Light Color Theme"
+msgid "Start time of light mode"
 msgstr "Heure de début Thème de couleur claire"
 
 msgctxt "#30003"
-msgid "Start time Dark Color Theme"
+msgid "Start time of dark mode"
 msgstr "Heure de début Thème de couleur sombre"
 
 msgctxt "#30004"
-msgid "Debug Mode"
+msgid "Debug logging"
 msgstr "Mode débogage"
 
 msgctxt "#30005"
-msgid "Dark Mode Select"
+msgid "Dark mode colour scheme"
 msgstr "Sélectionner le mode sombre"
 
 msgctxt "#30006"
-msgid "Light Mode Select"
+msgid "Light mode colour scheme"
 msgstr "Sélectionner le mode lumineux"
 
 msgctxt "#30007"
-msgid "Allow Theme change while playing media"
+msgid "Allow mode change while playing media"
 msgstr "Permettre le changement de thème lors de la lecture de média"
 
 msgctxt "#30008"
-msgid "Allow Theme change when Screensaver is on"
+msgid "Allow mode change while screensaver is active"
 msgstr "Permettre le changement de thème si l’économiseur d’écran est actif"
 
 msgctxt "#30009"
@@ -51,7 +51,7 @@ msgid "Advanced"
 msgstr "Avancé"
 
 msgctxt "#30010"
-msgid "Switch on Sunrise/Sunset"
+msgid "Switch on sunrise/sunset"
 msgstr "Activer au lever / coucher du soleil"
 
 msgctxt "#30011"
