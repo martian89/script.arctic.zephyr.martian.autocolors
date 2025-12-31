@@ -17,7 +17,7 @@
 		<summary lang="de_DE">Automatischer, zeitgesteuerter Farbschemawechsel zwischen hell und dunkel</summary>
 		<platform>all</platform>
 		<source>https://github.com/martian89/script.arctic.zephyr.martian.autocolors</source>
-		<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+		<license>GNU GENERAL PUBLIC LICENSE Version 3</license>
 		<assets>
 			<icon>resources/images/icon.png</icon>
 			<fanart>resources/images/fanart.jpg</fanart>
